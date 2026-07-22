@@ -1,0 +1,13 @@
+{
+  "name": "phoebe",
+  "version": "0.1.0",
+  "description": "Phoebe — rule-based FUPRE student information chatbot (weighted keyword scoring, no LLM/ML).",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node test/nlp.test.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

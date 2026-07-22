@@ -1,0 +1,227 @@
+{
+  "_meta": {
+    "name": "Phoebe — FUPRE Student Information Chatbot Knowledge Base",
+    "version": "0.1",
+    "source_note": "All factual content sourced from the official FUPRE website (fupre.edu.ng) as of July 2026. Session-specific dates reflect the 2025/2026 academic session. Time-sensitive entries point users to authoritative live sources rather than hardcoding values that expire.",
+    "confidence_threshold": 2,
+    "fallback_response": "I'm sorry, I didn't quite understand that. I can help with course registration, the academic calendar, exam rules, clearance, hostel accommodation, fees, results, departments and contacts, and general campus information. Could you rephrase, or ask about one of those? For anything I can't answer, you can reach the university on +234 811 796 7118 or info@fupre.edu.ng."
+  },
+  "intents": [
+    {
+      "intent": "greeting",
+      "keywords": [
+        {"word": "hello", "weight": 2},
+        {"word": "hi", "weight": 2},
+        {"word": "hey", "weight": 2},
+        {"word": "good morning", "weight": 3},
+        {"word": "good afternoon", "weight": 3},
+        {"word": "good evening", "weight": 3},
+        {"word": "phoebe", "weight": 2}
+      ],
+      "response": "Hi, I'm Phoebe — your FUPRE information assistant. I can help you with registration, the academic calendar, exams, clearance, hostel accommodation, fees, results, and finding departments or contacts. What would you like to know?"
+    },
+    {
+      "intent": "registration_deadline",
+      "keywords": [
+        {"word": "registration", "weight": 3},
+        {"word": "register", "weight": 3},
+        {"word": "course registration", "weight": 4},
+        {"word": "deadline", "weight": 2},
+        {"word": "late registration", "weight": 4},
+        {"word": "add drop", "weight": 3},
+        {"word": "add delete", "weight": 3}
+      ],
+      "response": "For the 2025/2026 session: registration opened for returning students on Monday, 17th November 2025, and ended for all students on Wednesday, 31st December 2025 (this is also the deadline for inter/intra-college transfers). Late registration ran from 5th–30th January 2026 and attracts a fee of ₦20,000. The deadline for add/delete requests was Friday, 6th February 2026. Note: registration timelines are strictly enforced. Always confirm current dates on the academic calendar at fupre.edu.ng/academic-calendar or on the student portal at student.fupre.edu.ng.",
+      "source": "https://fupre.edu.ng/academic-calendar/"
+    },
+    {
+      "intent": "academic_calendar",
+      "keywords": [
+        {"word": "calendar", "weight": 3},
+        {"word": "academic calendar", "weight": 4},
+        {"word": "semester", "weight": 2},
+        {"word": "lectures begin", "weight": 3},
+        {"word": "resumption", "weight": 3},
+        {"word": "matriculation", "weight": 3},
+        {"word": "important dates", "weight": 3},
+        {"word": "break", "weight": 1}
+      ],
+      "response": "Key dates for the 2025/2026 session — First semester: lectures began 24th November 2025 and ran to 27th February 2026; first semester exams held 9th–27th March 2026. Second semester: lectures commenced 20th April 2026 and ended 24th July 2026; second semester exams hold 3rd–21st August 2026. Matriculation for fresh students was 21st January 2026. For the full, current calendar, see fupre.edu.ng/academic-calendar.",
+      "source": "https://fupre.edu.ng/academic-calendar/"
+    },
+    {
+      "intent": "exam_timetable",
+      "keywords": [
+        {"word": "exam timetable", "weight": 4},
+        {"word": "exam schedule", "weight": 4},
+        {"word": "examination", "weight": 2},
+        {"word": "exam date", "weight": 3},
+        {"word": "when is exam", "weight": 3},
+        {"word": "timetable", "weight": 2}
+      ],
+      "response": "For the 2025/2026 session, first semester examinations held 9th–27th March 2026 and second semester examinations hold 3rd–21st August 2026. The specific course-by-course exam timetable is released each semester by your college/department and posted on the student portal (student.fupre.edu.ng) — Phoebe does not have individual course timetables. Check the portal or your departmental notice board for the detailed schedule.",
+      "source": "https://fupre.edu.ng/academic-calendar/"
+    },
+    {
+      "intent": "exam_rules",
+      "keywords": [
+        {"word": "exam rules", "weight": 4},
+        {"word": "examination rules", "weight": 4},
+        {"word": "exam regulations", "weight": 4},
+        {"word": "malpractice", "weight": 3},
+        {"word": "misconduct", "weight": 3},
+        {"word": "attendance", "weight": 2},
+        {"word": "75%", "weight": 2},
+        {"word": "eligible", "weight": 2},
+        {"word": "id card", "weight": 2}
+      ],
+      "response": "Key FUPRE examination rules: you must be duly registered and have met your financial obligations to sit for a course exam. Class attendance of at least 75% is compulsory — below that, you are disallowed from writing the exam. Continuous Assessment counts for 30% and the exam for 70% (for practical/field courses it's 60% practical, 40% exam). You must bring your ID card. Arriving more than 30 minutes late may bar you from the hall. Examination misconduct penalties range from warnings to rustication or expulsion depending on severity. Full rules: fupre.edu.ng/examination-rules-and-regulations.",
+      "source": "https://fupre.edu.ng/examination-rules-and-regulations/"
+    },
+    {
+      "intent": "clearance",
+      "keywords": [
+        {"word": "clearance", "weight": 4},
+        {"word": "clearance requirements", "weight": 5},
+        {"word": "documents", "weight": 2},
+        {"word": "acceptance fee", "weight": 3},
+        {"word": "jamb letter", "weight": 3},
+        {"word": "admission letter", "weight": 2},
+        {"word": "fresh student", "weight": 2}
+      ],
+      "response": "For undergraduate clearance, you'll need: your Remita print-out for the non-refundable acceptance fee (stamped by the Student Account officer), institutional copy of your JAMB admission letter, original JAMB/Direct Entry result, Post-UTME result notification, FUPRE admission notification, SSCE result (WAEC/NECO/NABTEB), birth certificate or age declaration, local government identification letter, eight coloured passport photographs, four coloured post-card photographs, WAEC/NECO/NABTEB scratch card(s), plus four photocopies of items 1–8 (and an extra copy of the SSCE result). Full lists for postgraduate, foundation and pre-degree are at fupre.edu.ng/clearance-requirements.",
+      "source": "https://fupre.edu.ng/clearance-requirements/"
+    },
+    {
+      "intent": "fees",
+      "keywords": [
+        {"word": "fees", "weight": 3},
+        {"word": "school fees", "weight": 4},
+        {"word": "fee", "weight": 2},
+        {"word": "payment", "weight": 2},
+        {"word": "how much", "weight": 2},
+        {"word": "pay", "weight": 1},
+        {"word": "charges", "weight": 3},
+        {"word": "remita", "weight": 2}
+      ],
+      "response": "Fee amounts vary by college, programme, and level, and are subject to change each session, so I don't hold exact figures to avoid giving you outdated numbers. Payments are made via Remita and viewed on the student portal at student.fupre.edu.ng. One fixed charge I can confirm: late registration attracts a ₦20,000 fee. For your specific fees, check the portal or contact the Student Accounts/Bursary office. Once the university shares an official current fee schedule, this answer can be updated with exact amounts.",
+      "source": "https://fupre.edu.ng/academic-calendar/"
+    },
+    {
+      "intent": "results",
+      "keywords": [
+        {"word": "result", "weight": 3},
+        {"word": "results", "weight": 3},
+        {"word": "my result", "weight": 4},
+        {"word": "when will results", "weight": 4},
+        {"word": "gpa", "weight": 2},
+        {"word": "cgpa", "weight": 2},
+        {"word": "grades", "weight": 2}
+      ],
+      "response": "Individual results and your GPA/CGPA are released through the student portal at student.fupre.edu.ng after each semester's examinations and departmental board approval — Phoebe cannot access personal results. Log in to the portal to view yours. If a result is missing or looks wrong, contact your department or Head of Department. Release timing varies by session and isn't fixed on the public calendar.",
+      "source": "https://student.fupre.edu.ng/"
+    },
+    {
+      "intent": "hostel",
+      "keywords": [
+        {"word": "hostel", "weight": 4},
+        {"word": "accommodation", "weight": 4},
+        {"word": "hostel application", "weight": 5},
+        {"word": "room", "weight": 2},
+        {"word": "lodge", "weight": 2},
+        {"word": "bed space", "weight": 3}
+      ],
+      "response": "Hostel accommodation is allocated through the student portal and the Student Affairs office, typically at the start of a session. Availability is limited and allocation details (opening dates, room fees, allocation lists) are announced per session on the portal and notice boards — these aren't fixed on the public site, so confirm current hostel information via student.fupre.edu.ng or the Student Affairs division. When the university provides live hostel data, this answer can be expanded.",
+      "source": "https://fupre.edu.ng/programmes/"
+    },
+    {
+      "intent": "colleges_departments",
+      "keywords": [
+        {"word": "college", "weight": 3},
+        {"word": "colleges", "weight": 3},
+        {"word": "department", "weight": 3},
+        {"word": "departments", "weight": 3},
+        {"word": "course", "weight": 1},
+        {"word": "programme", "weight": 2},
+        {"word": "faculty", "weight": 2}
+      ],
+      "response": "FUPRE is organised along college lines (related departments grouped into colleges, with no separate faculty tier). The colleges are: College of Science, College of Computing, College of Engineering and Technology, College of Maritime and Offshore Studies, and College of Petroleum Administration and Management. You can explore all departments at fupre.edu.ng/departments. Which college or department would you like info on?",
+      "source": "https://fupre.edu.ng/programmes/"
+    },
+    {
+      "intent": "computer_science_dept",
+      "keywords": [
+        {"word": "computer science", "weight": 4},
+        {"word": "computing", "weight": 3},
+        {"word": "college of computing", "weight": 5},
+        {"word": "comp sci", "weight": 3},
+        {"word": "cs department", "weight": 3}
+      ],
+      "response": "Computer Science at FUPRE sits under the College of Computing. You can find departmental programmes and details via fupre.edu.ng/colleges/computing and fupre.edu.ng/departments. For specific departmental contacts, course advisors, or HOD information, visit the department office or check the college page.",
+      "source": "https://fupre.edu.ng/programmes/"
+    },
+    {
+      "intent": "contact",
+      "keywords": [
+        {"word": "contact", "weight": 3},
+        {"word": "phone", "weight": 2},
+        {"word": "email", "weight": 2},
+        {"word": "reach", "weight": 2},
+        {"word": "call", "weight": 2},
+        {"word": "office", "weight": 1},
+        {"word": "location", "weight": 2},
+        {"word": "address", "weight": 2}
+      ],
+      "response": "You can reach FUPRE at +234 811 796 7118 or +234 707 755 0302, by email at info@fupre.edu.ng or support@fupre.edu.ng. The university is located at Federal University of Petroleum Resources, Effurun, Warri–Port Harcourt Expressway, East-West Road, Delta State, Nigeria. For admissions enquiries specifically, use the same phone numbers.",
+      "source": "https://fupre.edu.ng/programmes/"
+    },
+    {
+      "intent": "portal_help",
+      "keywords": [
+        {"word": "portal", "weight": 4},
+        {"word": "student portal", "weight": 5},
+        {"word": "login", "weight": 3},
+        {"word": "student login", "weight": 4},
+        {"word": "online services", "weight": 3},
+        {"word": "e-clearance", "weight": 3},
+        {"word": "transcript", "weight": 3}
+      ],
+      "response": "The student portal is at student.fupre.edu.ng — use it for course registration, results, fee payment records, and hostel allocation. Online services including e-clearance, e-transcript, and e-learning are at online-services.fupre.edu.ng. New applicants use the admissions portal at portal.fupre.edu.ng. If you have trouble logging in, contact the ICT/portal support through the university's official contacts.",
+      "source": "https://fupre.edu.ng/programmes/"
+    },
+    {
+      "intent": "siwes",
+      "keywords": [
+        {"word": "siwes", "weight": 4},
+        {"word": "industrial training", "weight": 4},
+        {"word": "it placement", "weight": 3},
+        {"word": "internship", "weight": 3},
+        {"word": "attachment", "weight": 2}
+      ],
+      "response": "SIWES (Students' Industrial Work Experience Scheme) / industrial training is coordinated through your department and the university's SIWES/industrial training unit. Placement timing, logbook requirements, and supervision are handled at departmental level — Phoebe doesn't hold live SIWES placement details. Check with your department or the SIWES coordinator for current requirements and deadlines.",
+      "source": "https://fupre.edu.ng/programmes/"
+    },
+    {
+      "intent": "transfer",
+      "keywords": [
+        {"word": "transfer", "weight": 4},
+        {"word": "inter university transfer", "weight": 5},
+        {"word": "intra university transfer", "weight": 5},
+        {"word": "change department", "weight": 3},
+        {"word": "change college", "weight": 3}
+      ],
+      "response": "FUPRE allows intra- and inter-university transfers. For the 2025/2026 session, the deadline for inter/intra-college transfers was 31st December 2025. Requirements and application details are at fupre.edu.ng/intra-and-inter-university-transfer. Confirm current deadlines on the academic calendar, as they change each session.",
+      "source": "https://fupre.edu.ng/academic-calendar/"
+    },
+    {
+      "intent": "thanks",
+      "keywords": [
+        {"word": "thank you", "weight": 3},
+        {"word": "thanks", "weight": 3},
+        {"word": "appreciate", "weight": 2},
+        {"word": "okay thanks", "weight": 3}
+      ],
+      "response": "You're welcome! If you need anything else about FUPRE — registration, exams, clearance, hostel, results, or contacts — just ask."
+    }
+  ]
+}

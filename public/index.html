@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Phoebe — FUPRE Student Assistant</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="chat-app">
+    <header class="chat-header">
+      <div class="avatar">P</div>
+      <div class="header-text">
+        <h1>Phoebe</h1>
+        <p>FUPRE Student Information Assistant</p>
+      </div>
+    </header>
+
+    <main id="chat-window" class="chat-window" aria-live="polite"></main>
+
+    <form id="chat-form" class="chat-input-bar">
+      <input
+        id="chat-input"
+        type="text"
+        placeholder="Ask about registration, exams, hostel, fees..."
+        autocomplete="off"
+        maxlength="500"
+      />
+      <button type="submit" id="send-btn" aria-label="Send message">Send</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
